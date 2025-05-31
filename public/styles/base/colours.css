@@ -1,0 +1,39 @@
+/*
+ * Colours, a set of CSS variables for a consistent colour palette.
+ *
+ * Uses the HSL (hue, saturation, lightness) colour format for better
+ * readability and manipulation. Follows a structured naming convention with
+ * numeric scales.
+ */
+
+:root {
+    /* Primary colours */
+    --clr-primary-100: hsl(210, 100%, 95%);
+    --clr-primary-200: hsl(210, 100%, 85%);
+    --clr-primary-300: hsl(210, 100%, 75%);
+    --clr-primary-400: hsl(210, 100%, 65%);
+    --clr-primary-500: hsl(210, 100%, 45%);
+    --clr-primary-600: hsl(210, 100%, 35%);
+    --clr-primary-700: hsl(210, 100%, 25%);
+    --clr-primary-800: hsl(210, 100%, 15%);
+    --clr-primary-900: hsl(210, 100%, 10%);
+
+    /* Neutral colours */
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-200: hsl(0, 0%, 96%);
+    --clr-neutral-300: hsl(0, 0%, 87%);
+    --clr-neutral-400: hsl(0, 0%, 80%);
+    --clr-neutral-500: hsl(0, 0%, 60%);
+    --clr-neutral-600: hsl(210, 7%, 56%);
+    --clr-neutral-700: hsl(210, 9%, 31%);
+    --clr-neutral-800: hsl(0, 0%, 20%);
+    --clr-neutral-900: hsl(0, 0%, 10%);
+
+    /* Semantic colours for easier reference */
+    --clr-background: var(--clr-neutral-200);
+    --clr-card: var(--clr-neutral-100);
+    --clr-text: var(--clr-neutral-800);
+    --clr-text-light: var(--clr-neutral-600);
+    --clr-border: var(--clr-neutral-300);
+}
+

@@ -1,0 +1,98 @@
+/*
+ * Sizes, a set of custom properties for spacing, sizing, borders, etc.
+ */
+
+:root {
+    /* Spacing
+     *
+     * - 3xs: extra extra small spacing
+     * - 2xs: extra small spacing
+     * - xs: small spacing
+     * - s: standard spacing
+     * - m: medium spacing
+     * - l: large spacing
+     * - xl: extra large spacing
+     * - 2xl: extra extra large spacing
+     * - 3xl: extra extra extra large spacing
+     *
+     * Uses clamp(min, preferred, max) to ensure responsive spacing:
+     * - min: The smallest spacing, ensuring readability on small screens
+     * - preferred: The ideal spacing that scales with viewport width
+     * - max: The largest spacing, preventing excessive scaling on large screens
+     */
+    --space-3xs: clamp(0.25rem, 0.25rem, 0.25rem);
+    --space-2xs: clamp(0.5rem, 0.5rem, 0.5rem);
+    --space-xs: clamp(0.75rem, 0.75rem, 0.75rem);
+    --space-s: clamp(1rem, 1rem, 1rem);
+    --space-m: clamp(1.5rem, 3vw, 2rem);
+    --space-l: clamp(2rem, 4vw, 3rem);
+    --space-xl: clamp(3rem, 6vw, 4rem);
+    --space-2xl: clamp(4rem, 8vw, 6rem);
+    --space-3xl: clamp(6rem, 10vw, 8rem);
+
+    /* Border radius scale
+     *
+     * - sm: small radius for subtle rounding
+     * - md: medium radius for standard rounding
+     * - lg: large radius for more pronounced rounding
+     */
+    --radius-sm: 0.2rem;
+    --radius-md: 0.325rem;
+    --radius-lg: 0.5rem;
+
+    /* Shadows
+     *
+     * - sm: small shadow for subtle depth
+     * - md: medium shadow for standard depth
+     * - lg: large shadow for pronounced depth
+     * - focus: shadow for focus states (for example, for example inputs, buttons)
+     */
+    --shadow-sm: 0 1px 3px hsla(0, 0%, 0%, 0.1);
+    --shadow-md: 0 4px 6px hsla(0, 0%, 0%, 0.1);
+    --shadow-lg: 0 10px 15px hsla(0, 0%, 0%, 0.1);
+    --shadow-focus: 0 0 0 3px hsla(210, 100%, 50%, 0.3);
+
+    /* Container settings
+     *
+     * - max-width: maximum width for main content containers
+     * - padding: padding for main content containers
+     */
+    --container-max-width: 1120px;
+    --container-padding: 0.5rem;
+
+    /* Width constraints for content readability
+     *
+     * - xs: extra small width for narrow content
+     * - sm: small width for slightly wider content
+     * - md: medium width for standard content
+     * - lg: large width for wide content
+     */
+    --content-width-xs: 20ch;
+    --content-width-sm: 45ch;
+    --content-width-md: 65ch;
+    --content-width-lg: 75ch;
+
+    /* Z-index scale used for layering elements
+     *
+     * - below: elements that should be behind most content
+     * - normal: default stacking context for most elements
+     * - above: elements that should be above normal content
+     */
+    --z-below: -1;
+    --z-normal: 0;
+    --z-above: 1;
+
+    /* Heading underline dimensions
+     *
+     * - width: the width of the decorative underline for headings
+     * - height: the thickness of the decorative underline for headings
+     * - tablet/desktop: responsive variants for different screen sizes
+     */
+    --heading-underline-width: 60px;
+    --heading-underline-height: 3px;
+    --heading-underline-width-tablet: 50px;
+    --heading-underline-height-tablet: 2px;
+    --heading-underline-width-desktop: 60px;
+    --heading-underline-height-desktop: 3px;
+}
+

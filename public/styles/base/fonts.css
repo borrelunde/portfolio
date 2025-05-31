@@ -1,0 +1,50 @@
+/* Fonts, a set of CSS variables for typography styles.
+ *
+ * Uses clamp(min, preferred, max) for responsive typography without media
+ * queries. Imports fonts and defines typography custom properties.
+ */
+
+/* Import the Montserrat, Open Sans, and Roboto Mono fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap');
+
+:root {
+    /* Font families */
+    --ff-primary: 'Open Sans', sans-serif;
+    --ff-heading: 'Montserrat', sans-serif;
+    --ff-mono: 'Roboto Mono', monospace;
+
+    /* Font weights */
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+    /* Line heights */
+    --lh-tight: 1.2;
+    --lh-normal: 1.5;
+    --lh-loose: 1.8;
+
+    /* Font sizes, clamp(min, preferred, max) is used for responsive typography
+     * without media queries:
+     * - min: The smallest size, ensuring readability on small screens
+     * - preferred: The ideal size that scales with viewport width
+     * - max: The largest size, preventing excessive scaling on large screens
+     */
+    --fs-200: clamp(0.75rem, 0.75rem, 0.75rem);
+    --fs-300: clamp(0.875rem, 0.875rem, 0.875rem);
+    --fs-400: 1rem; /* Base size (1 rem is 16 pixels) */
+    --fs-500: clamp(1.125rem, 1.125rem + 0.25vw, 1.25rem);
+    --fs-600: clamp(1.25rem, 1.25rem + 0.5vw, 1.5rem);
+    --fs-700: clamp(1.5rem, 1.5rem + 1vw, 2rem);
+    --fs-800: clamp(2rem, 2rem + 1.5vw, 2.5rem);
+    --fs-900: clamp(2.5rem, 2.5rem + 2vw, 3rem);
+    --fs-1000: clamp(3rem, 3rem + 3vw, 4rem);
+
+    /* Letter spacing */
+    --ls-tight: -0.05em;
+    --ls-normal: 0;
+    --ls-wide: 0.05em;
+    --ls-wider: 0.1em;
+}
+

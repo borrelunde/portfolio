@@ -1,0 +1,18 @@
+/*
+ * Main CSS, the entry point for all styles.
+ *
+ * This file doesn't contain any styles itself, but imports all other CSS files.
+ * The import order is important because of cascading:
+ *
+ * 1. Base styles (reset, typography, colours, sizes)
+ * 2. Components (reusable elements like buttons and cards)
+ * 3. Layout (structural elements like header and footer)
+ * 4. Sections (page-specific content areas)
+ */
+
+@import 'base/colours.css';
+@import 'base/fonts.css';
+@import 'base/sizes.css';
+@import 'base/animations.css';
+@import 'base/reset.css';
+@import 'base/typography.css';

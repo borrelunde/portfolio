@@ -1,0 +1,139 @@
+/*
+ * Reset CSS
+ *
+ * A modern CSS reset that:
+ * - Provides a clean baseline for styling
+ * - Removes browser inconsistencies
+ * - Sets sensible defaults for all elements
+ * - Improves accessibility and usability
+ */
+
+/*
+ * Box Model
+ *
+ * - Sets all elements to use the more intuitive border-box model
+ * - Ensures padding and borders are included in element width calculations
+ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+ * Spacing Reset
+ *
+ * - Removes default margins and padding from all elements
+ * - Creates a clean slate for consistent spacing using our design system
+ */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Document & Typography Defaults
+ *
+ * - Sets core defaults for the document body
+ * - Establishes baseline typography using design system variables
+ * - Ensures text is rendered optimally for readability
+ */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: var(--lh-normal);
+    font-family: var(--ff-primary);
+    font-size: var(--fs-400);
+    color: var(--clr-text);
+    background-color: var(--clr-background);
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+/*
+ * Smooth Scrolling
+ *
+ * - Enables smooth scrolling behavior for anchor links
+ * - Improves user experience when navigating between page sections
+ */
+html {
+    scroll-behavior: smooth;
+}
+
+/*
+ * Media Elements
+ *
+ * - Makes images and other media more manageable
+ * - Prevents overflow issues with responsive layouts
+ * - Ensures media is displayed as block elements for consistent spacing
+ */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/*
+ * Form Elements
+ *
+ * - Normalizes font inheritance for form elements
+ * - Ensures consistent typography across interactive elements
+ */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+ * Accessibility: Reduced Motion
+ *
+ * - Respects user preferences for reduced motion
+ * - Removes animations and transitions for users who prefer not to see them
+ * - Improves accessibility for users with vestibular disorders
+ */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/*
+ * Link Styling
+ *
+ * - Sets default appearance for links
+ * - Adds smooth transitions for hover states
+ * - Uses design system colors for consistency
+ */
+a {
+    color: var(--clr-primary-600);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--clr-primary-800);
+}
+
+/*
+ * List Styling
+ *
+ * - Removes default list styles
+ * - Allows for custom styling of lists using our design system
+ * - Includes support for ARIA roles for semantic HTML
+ */
+ul,
+ol,
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
