@@ -32,7 +32,7 @@ Add the following scripts to the `package.json` file:
 ```
 "scripts": {
   "dev": "vite",
-  "build": "vite build",
+  "build": "tsc && vite build",
   "preview": "vite preview"
 }
 ```
