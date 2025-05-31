@@ -16,3 +16,5 @@
 @import 'base/animations.css';
 @import 'base/reset.css';
 @import 'base/typography.css';
+
+@import 'layout/container.css';
