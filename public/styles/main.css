@@ -18,4 +18,5 @@
 @import 'base/typography.css';
 
 @import 'layout/header.css';
+@import 'layout/footer.css';
 @import 'layout/container.css';
