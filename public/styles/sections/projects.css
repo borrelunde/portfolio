@@ -1,0 +1,267 @@
+/*
+ * Projects Section
+ *
+ * Displays projects in three categories: Programming, Mechanical Design, and Electronics.
+ * Uses a card-based layout with filtering functionality for easy navigation.
+ */
+
+.projects {
+    /* Component-specific properties */
+    --projects-padding-block-start: var(--space-m);
+    --projects-padding-block-end: var(--space-m);
+    --projects-bg-color: var(--clr-neutral-200);
+    --projects-card-gap: var(--space-m);
+
+    /* Core styles */
+    padding-block: var(--projects-padding-block-start) var(--projects-padding-block-end);
+    background-color: var(--projects-bg-color);
+    border-top: 1px solid var(--clr-primary-100);
+    box-shadow: inset 0 5px 10px -5px hsla(0, 0%, 0%, 0.05);
+}
+
+/* Filter buttons container */
+.projects__filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-m);
+}
+
+/* Filter button */
+.projects__filter-btn {
+    background-color: var(--clr-neutral-200);
+    border: 1px solid var(--clr-neutral-300);
+    border-radius: var(--radius-sm);
+    padding: var(--space-2xs) var(--space-s);
+    font-size: var(--fs-300);
+    color: var(--clr-neutral-700);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    outline: none;
+}
+
+/* Active filter button */
+.projects__filter-btn.active {
+    background-color: var(--clr-primary-500);
+    border-color: var(--clr-primary-500);
+    color: var(--clr-neutral-100);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Filter button hover state */
+.projects__filter-btn:hover:not(.active) {
+    background-color: var(--clr-neutral-300);
+}
+
+/* Filter button focus state */
+.projects__filter-btn:focus-visible {
+    outline: 2px solid var(--clr-primary-500);
+    outline-offset: 2px;
+}
+
+/* Project count */
+.projects__count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: var(--space-2xs);
+    font-size: var(--fs-200);
+    font-weight: var(--fw-medium);
+    color: inherit;
+    opacity: 0.8;
+}
+
+/* Projects content container */
+.projects__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--projects-card-gap);
+    width: 100%;
+    transition: opacity 0.3s ease;
+}
+
+/* No results message */
+.projects__no-results {
+    text-align: center;
+    padding: var(--space-l);
+    background-color: var(--clr-neutral-100);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    margin-top: var(--space-m);
+    color: var(--clr-neutral-700);
+    font-size: var(--fs-400);
+}
+
+/* Project card animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Project card - base styles */
+.projects__card {
+    background-color: var(--clr-card);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    padding: var(--space-m);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    height: 100%; /* Ensure all cards have the same height */
+    border-top: 3px solid transparent;
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0; /* Start with opacity 0 */
+}
+
+/* Project card shadow effect */
+.projects__card:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+/* Project card header */
+.projects__card-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--space-s);
+}
+
+/* Project title */
+.projects__title {
+    font-size: var(--fs-500);
+    font-weight: var(--fw-semibold);
+    margin-bottom: var(--space-3xs);
+}
+
+/* Programming project title */
+.projects__card[data-category="programming"] .projects__title {
+    color: var(--clr-programming-500);
+}
+
+/* Mechanical project title */
+.projects__card[data-category="mechanical"] .projects__title {
+    color: var(--clr-mechanical-500);
+}
+
+/* Electronics project title */
+.projects__card[data-category="electronics"] .projects__title {
+    color: var(--clr-electronics-500);
+}
+
+/* Project belongs to */
+.projects__belongs-to {
+    font-size: var(--fs-300);
+    color: var(--clr-neutral-600);
+    margin-bottom: var(--space-2xs);
+}
+
+/* Project description */
+.projects__description {
+    color: var(--clr-neutral-700);
+    font-size: var(--fs-300);
+    margin-bottom: var(--space-s);
+    flex-grow: 1; /* Allow description to grow and push tags to bottom */
+}
+
+/* Project tags container */
+.projects__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3xs) var(--space-2xs);
+    margin-bottom: var(--space-s);
+    margin-top: auto; /* Push tags to bottom of card */
+}
+
+/* Project tag */
+.projects__tag {
+    border-radius: var(--radius-sm);
+    padding: var(--space-3xs) var(--space-xs);
+    font-size: var(--fs-200);
+    background-color: var(--clr-neutral-100);
+    border: 1px solid var(--clr-neutral-300);
+    color: var(--clr-neutral-700);
+}
+
+/* Programming project tag */
+.projects__card[data-category="programming"] .projects__tag {
+    background-color: var(--clr-programming-500-095);
+    border: 1px solid var(--clr-programming-500-095);
+    color: var(--clr-neutral-100);
+}
+
+/* Mechanical project tag */
+.projects__card[data-category="mechanical"] .projects__tag {
+    background-color: var(--clr-mechanical-400-080);
+    border: 1px solid var(--clr-mechanical-400-080);
+    color: var(--clr-neutral-100);
+}
+
+/* Electronics project tag */
+.projects__card[data-category="electronics"] .projects__tag {
+    background-color: var(--clr-electronics-500-090);
+    border: 1px solid var(--clr-electronics-500-090);
+    color: var(--clr-neutral-100);
+}
+
+/* Project links */
+.projects__links {
+    display: flex;
+    gap: var(--space-s);
+}
+
+/* Project link */
+.projects__link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2xs);
+    color: var(--clr-primary-500);
+    text-decoration: none;
+    font-size: var(--fs-300);
+    transition: color 0.2s ease;
+}
+
+/* Project link hover */
+.projects__link:hover {
+    color: var(--clr-primary-600);
+}
+
+/* Project link icon */
+.projects__link i {
+    font-size: var(--fs-400);
+}
+
+/* Tablet styles (576 pixels and up) */
+@media (min-width: 576px) {
+    .projects {
+        --projects-padding-block-start: var(--space-xl);
+        --projects-padding-block-end: var(--space-l);
+    }
+
+    .projects__content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects__title {
+        font-size: var(--fs-600);
+    }
+}
+
+/* Desktop styles (992 pixels and up) */
+@media (min-width: 992px) {
+    .projects {
+        --projects-padding-block-start: var(--space-2xl);
+        --projects-padding-block-end: var(--space-xl);
+        --projects-card-gap: var(--space-m);
+    }
+
+    .projects__content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
