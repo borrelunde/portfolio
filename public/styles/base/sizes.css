@@ -77,10 +77,12 @@
      * - below: elements that should be behind most content
      * - normal: default stacking context for most elements
      * - above: elements that should be above normal content
+     * - modal: elements that should be above most content, like the navigation bar
      */
     --z-below: -1;
     --z-normal: 0;
     --z-above: 1;
+    --z-modal: 100;
 
     /* Heading underline dimensions
      *

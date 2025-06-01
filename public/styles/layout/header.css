@@ -1,0 +1,322 @@
+/*
+ * Header
+ *
+ * Main navigation component that appears on all pages. Implements a responsive
+ * design with different layouts for mobile and desktop. Features a fixed
+ * position header that stays visible while scrolling.
+ */
+
+/*
+ * Header
+ */
+.header {
+    /* Ensures that the header visible is at the top during scrolling. */
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    background-color: var(--clr-primary-700);
+    box-shadow: var(--shadow-md);
+    padding: var(--space-2xs) 0;
+
+    /* Ensures header is above other content. */
+    z-index: var(--z-modal);
+
+    /* Transition for changes when scrolling. For example, padding. */
+    transition: var(--transition-default);
+}
+
+/*
+ * Header scrolled, applied when the user scrolls down the page.
+ */
+.header.scrolled {
+    /*
+     * Can be used to condense the padding for a compact look, but that results
+     * in a gap between the header and the navigation when the user scrolls
+     * down. To keep it simple, no changes are made to the padding for the
+     * mobile view.
+     */
+}
+
+/*
+ * Header container, responsible for the layout of the header logo and navigation.
+ */
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*
+ * Header Logo
+ */
+.header__logo a {
+    font-size: var(--fs-600); /* Relatively large font size. */
+    font-weight: var(--fw-semibold); /* Semi-bold for emphasis. */
+    color: var(--clr-neutral-100); /* High contrast colour for visibility. */
+}
+
+/*
+ * Header navigation wrapper, responsible for positioning the navigation elements.
+ */
+.header__nav-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+/*
+ * Mobile Navigation Toggle
+ *
+ * - Hamburger button for small screens
+ * - Only visible on mobile and tablet viewports
+ * - Hidden on desktop where the full navigation is always visible
+ */
+.header__nav__mobile-toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--space-3xs);
+}
+
+/*
+ * Hamburger Icon
+ *
+ * - Three-line menu icon created with CSS
+ * - Uses a middle line with ::before and ::after pseudo-elements
+ * - Consistent sizing for all three lines
+ */
+.icon-hamburger {
+    --hamburger-width: 24px;
+    --hamburger-height: 2px;
+    --hamburger-gap: 8px;
+
+    display: block;
+    width: var(--hamburger-width);
+    height: var(--hamburger-height);
+    background-color: var(--clr-neutral-100);
+    position: relative;
+}
+
+/* Top and bottom lines of hamburger icon. */
+.icon-hamburger::before,
+.icon-hamburger::after {
+    content: '';
+    position: absolute;
+    width: var(--hamburger-width);
+    height: var(--hamburger-height);
+    background-color: var(--clr-neutral-100);
+    left: 0;
+    transition: all var(--transition-fast);
+}
+
+/* Top line positioning. */
+.icon-hamburger::before {
+    top: calc(-1 * var(--hamburger-gap));
+}
+
+/* Bottom line positioning. */
+.icon-hamburger::after {
+    bottom: calc(-1 * var(--hamburger-gap));
+}
+
+/*
+ * Primary Navigation
+ *
+ * - Off-canvas menu that slides in when activated on mobile
+ * - Hidden by default on mobile (transformed out of view)
+ * - Shown when the .active class is added via TypeScript
+ * - Uses CSS transforms for smooth animation
+ */
+.header__nav {
+    /*
+     * Custom property for the top position of the navigation, the height of
+     * the header.
+     */
+    --nav-top-position: 48px;
+
+    /* Fixed position to keep the navigation at the top. */
+    position: fixed;
+    top: var(--nav-top-position);
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    background-color: var(--clr-primary-800);
+    padding: var(--space-m) 0;
+    box-shadow: var(--shadow-md);
+
+    transform: translateY(-100%); /* Initially positioned off-screen above the header. */
+    opacity: 0; /* Initially hidden off-screen. */
+
+    /* Transition to slide the menu in smoothly. */
+    transition: all var(--transition-default);
+
+    /* Prevents interaction when hidden. */
+    pointer-events: none;
+}
+
+/*
+ * Active state, applied via TypeScript when the menu toggle is clicked.
+ */
+.header__nav.active {
+    transform: translateY(0); /* Moves the navigation into view. */
+    opacity: 1; /* Fully visible. */
+    pointer-events: auto; /* Allows interaction. */
+}
+
+/*
+ * Navigation List
+ *
+ * - Vertical layout on mobile
+ * - Centered items with consistent spacing
+ */
+.header__nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-s);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/*
+ * Navigation Links
+ *
+ * - High contrast text against navigation background
+ * - Consistent typography using design system variables
+ * - Positioned for the underline hover effect
+ */
+.header__nav a {
+    color: var(--clr-neutral-100);
+    font-weight: var(--fw-medium);
+    position: relative;
+    padding: var(--space-3xs) var(--space-2xs);
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-family: var(--ff-heading);
+    text-transform: uppercase;
+    font-size: var(--fs-300);
+    letter-spacing: var(--ls-normal);
+}
+
+/*
+ * Animated Underline Effect
+ *
+ * - Uses ::after pseudo-element for the underline
+ * - Animates width from 0 to 100% on hover
+ * - Grows from left to right and stays until cursor leaves
+ * - Creates an elegant interaction for links
+ */
+.header__nav a::after {
+    content: '';
+    position: absolute;
+    bottom: calc(-0.5 * var(--space-3xs));
+    left: 0;
+    width: 0;
+    height: calc(0.5 * var(--space-3xs));
+    background-color: var(--clr-neutral-100);
+    transition: width var(--duration-normal) var(--ease-default);
+    opacity: 0.8;
+    transform-origin: left center;
+}
+
+/* Hover state for underline - grows to full width from left to right. */
+.header__nav a:hover::after {
+    width: 100%;
+}
+
+/* Tablet styles (576 pixels and up). */
+@media (min-width: 576px) {
+    /* Larger header for better proportions. */
+    .header {
+        padding: var(--space-2xs) 0;
+    }
+
+    /* Increase the logo font size. */
+    .header__logo a {
+        font-size: var(--fs-700);
+    }
+
+    /* Adjust the top position of the navigation since the header height has
+     * is larger due to larger padding. */
+    .header__nav {
+        /*
+         * Adjust the custom property for the top position of the navigation,
+         * the height of the header.
+         */
+        --nav-top-position: 54px;
+
+        /* Fixed position to keep the navigation at the top. */
+        top: var(--nav-top-position);
+    }
+
+    /* Adjust navigation list spacing. */
+    .header__nav-list {
+        gap: var(--space-s);
+    }
+
+    /* Adjust link padding for better touch targets. */
+    .header__nav a {
+        padding: var(--space-3xs) var(--space-s);
+    }
+}
+
+/* Desktop styles (992 pixels and up). */
+@media (min-width: 992px) {
+    /* Larger header for better proportions. */
+    .header {
+        padding: var(--space-s) 0;
+    }
+
+    /* Larger condensed header when scrolled. */
+    .header.scrolled {
+        padding: var(--space-2xs) 0;
+    }
+
+    /* Hide mobile menu toggle on desktop. */
+    .header__nav__mobile-toggle {
+        display: none;
+    }
+
+    /*
+     * Desktop Navigation Layout
+     *
+     * - Horizontal layout instead of vertical mobile menu
+     * - Always visible (no slide-in animation needed)
+     * - Transparent background to blend with header
+     */
+    .header__nav {
+        position: static;
+        transform: none;
+        opacity: 1;
+        pointer-events: auto;
+        padding: 0;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    /* Horizontal navigation list. */
+    .header__nav-list {
+        flex-direction: row;
+        gap: var(--space-l);
+    }
+
+    /* Adjusted link styling for horizontal layout. */
+    .header__nav a {
+        padding: 0;
+        width: auto;
+        text-align: left;
+        font-size: var(--fs-300);
+    }
+
+    /* Adjusted underline position. */
+    .header__nav a::after {
+        bottom: calc(-1.25 * var(--space-3xs));
+    }
+}

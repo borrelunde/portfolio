@@ -14,16 +14,21 @@
         <div class="header__logo">
             <a href="/">Børre A. Opedal Lunde</a>
         </div>
-        <nav class="header__nav">
-            <ul class="header__nav__list">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#interests">Interests</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="header__nav-wrapper">
+            <button class="header__nav__mobile-toggle">
+                <span class="icon-hamburger"></span>
+            </button>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#interests">Interests</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
 </header>
 
@@ -84,5 +89,7 @@
         </div>
     </div>
 </footer>
+
+<script type="module" src="/src/index.ts"></script>
 </body>
 </html>
