@@ -1,0 +1,87 @@
+/*
+ * Buttons
+ *
+ * Reusable button components used throughout the site.
+ * Implements a consistent button system with variants for different purposes.
+ */
+
+/* Base Button
+ * Common styling shared by all button variants
+ */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.75rem;
+    border-radius: var(--radius-sm);
+    font-weight: var(--fw-semibold);
+    text-align: center;
+    cursor: pointer;
+    transition: all var(--transition-default);
+    border: none;
+    font-family: var(--ff-heading);
+    letter-spacing: var(--ls-wide);
+    text-transform: uppercase;
+    font-size: var(--fs-300);
+}
+
+/* Primary Button
+ * Solid background, used for main actions
+ */
+.btn-primary {
+    background-color: var(--clr-primary-700);
+    color: var(--clr-neutral-100);
+}
+
+.btn-primary:hover {
+    background-color: var(--clr-primary-800);
+}
+
+/* Secondary Button
+ * Outlined style for less prominent actions
+ */
+.btn-secondary {
+    background-color: transparent;
+    color: var(--clr-primary-700);
+    border: 1px solid var(--clr-primary-700);
+}
+
+.btn-secondary:hover {
+    background-color: var(--clr-primary-700);
+    color: var(--clr-neutral-100);
+}
+
+/* Small Button Variant
+ * Compact size for space-constrained areas
+ */
+.btn-sm {
+    padding: var(--space-3xs) var(--space-s);
+    font-size: var(--fs-300);
+}
+
+/* Hero Section Button Variants
+ * Specialized styling for buttons in the hero section
+ */
+.hero .btn-primary {
+    background-color: var(--clr-primary-700);
+    color: var(--clr-neutral-100);
+    box-shadow: var(--shadow-sm);
+}
+
+.hero .btn-primary:hover {
+    background-color: var(--clr-primary-800);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.hero .btn-secondary {
+    background-color: transparent;
+    color: var(--clr-neutral-100);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: var(--shadow-sm);
+}
+
+.hero .btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--clr-neutral-100);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
