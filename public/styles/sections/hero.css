@@ -22,7 +22,7 @@
     min-height: 100vh;
     display: grid; /* Creates a two-dimensional grid layout */
     place-items: center; /* Center items both horizontally and vertically */
-    background-image: url('../../images/urkeegga-1.jpg');
+    background-image: url('../../images/hero_background.jpg');
     background-size: cover;
     background-position: 38%; /* Placing the image so that the body is slightly visible on the left side */
     position: relative; /* Enables absolute positioning of pseudo-elements */
