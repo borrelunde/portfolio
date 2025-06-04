@@ -1,0 +1,92 @@
+/*
+ * Footer
+ *
+ * Site footer with navigation links and copyright information.
+ * Responsive design for mobile, tablet, and desktop viewports.
+ */
+
+/* Footer Container */
+.footer {
+    background-color: var(--clr-neutral-900);
+    color: var(--clr-neutral-100);
+    padding: var(--space-l) 0;
+    text-align: center; /* Center alignment for mobile view */
+}
+
+/* Footer Layout Container */
+.footer .container {
+    display: flex;
+    flex-direction: column-reverse; /* Navigation above, copyright below on mobile */
+    gap: var(--space-s);
+    align-items: center; /* Center alignment for mobile */
+}
+
+/* Copyright Text */
+.footer__copyright {
+    margin: 0;
+    font-size: var(--fs-300); /* Smaller text for mobile */
+}
+
+/* Footer Navigation */
+.footer__nav {
+    display: grid; /* Vertical layout for mobile */
+    gap: var(--space-3xs);
+    text-align: center;
+}
+
+/* Footer Navigation Links */
+.footer__link {
+    color: var(--clr-neutral-100);
+    opacity: 0.8;
+    transition: var(--transition-opacity);
+    padding: var(--space-3xs);
+    font-size: var(--fs-300); /* Smaller text for mobile */
+    text-decoration: none;
+}
+
+/* Footer Link Hover/Focus States */
+.footer__link:hover,
+.footer__link:focus {
+    opacity: 1;
+    color: var(--clr-neutral-100);
+    text-decoration: underline;
+}
+
+/* Responsive Layouts */
+
+/* Tablet styles (576 pixels and up) */
+@media (min-width: 576px) {
+    .footer {
+        padding: var(--space-l) 0;
+    }
+
+    .footer .container {
+        flex-direction: row; /* Horizontal layout */
+        justify-content: space-between;
+        align-items: center;
+        gap: var(--space-l);
+        text-align: left;
+    }
+
+    .footer__nav {
+        display: flex; /* Horizontal layout */
+        gap: var(--space-l);
+    }
+
+    .footer__link {
+        font-size: var(--fs-400);
+    }
+
+    .footer__copyright {
+        font-size: var(--fs-400);
+    }
+}
+
+/* Desktop styles (992 pixels and up) */
+@media (min-width: 992px) {
+    .footer {
+        padding: var(--space-xl) 0;
+    }
+
+    /* Same structure as tablet with increased padding */
+}

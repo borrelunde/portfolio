@@ -1,0 +1,194 @@
+/*
+ * Skills Section
+ *
+ * Displays professional skills in three categories: Programming, Mechanical
+ * Design, and Electronics. Uses a card-based layout for clear organization and
+ * visual separation.
+ */
+
+.skills {
+    /* Component-specific properties */
+    --skills-padding-block-start: var(--space-m);
+    --skills-padding-block-end: var(--space-m);
+    --skills-bg-color: var(--clr-neutral-200);
+    --skills-card-gap: var(--space-m);
+
+    /* Core styles */
+    padding-block: var(--skills-padding-block-start) var(--skills-padding-block-end);
+    background-color: var(--skills-bg-color);
+    border-top: 1px solid var(--clr-primary-100);
+    box-shadow: inset 0 5px 10px -5px hsla(0, 0%, 0%, 0.05);
+}
+
+/* Section introduction */
+.skills__intro {
+    margin-bottom: var(--space-m);
+}
+
+/* Skills content container */
+.skills__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--skills-card-gap);
+    width: 100%;
+}
+
+/* Skill category card - base styles */
+.skills__card {
+    background-color: var(--clr-card);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    padding: var(--space-m);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-top: 3px solid transparent;
+}
+
+/* Skill category title */
+.skills__card-title {
+    margin-bottom: var(--space-s);
+    font-weight: var(--fw-semibold);
+    border-bottom: 1px solid var(--clr-primary-100);
+    padding-bottom: var(--space-2xs);
+}
+
+/* Programming card title */
+.skills__content .skills__card:nth-child(1) .skills__card-title {
+    color: var(--clr-programming-500);
+    border-bottom-color: var(--clr-programming-400);
+}
+
+/* Mechanical Design card title */
+.skills__content .skills__card:nth-child(2) .skills__card-title {
+    color: var(--clr-mechanical-500);
+    border-bottom-color: var(--clr-mechanical-400);
+}
+
+/* Electronics card title */
+.skills__content .skills__card:nth-child(3) .skills__card-title {
+    color: var(--clr-electronics-500);
+    border-bottom-color: var(--clr-electronics-400);
+}
+
+/* Description text */
+.skills__description {
+    color: var(--clr-neutral-700);
+    font-size: var(--fs-300);
+}
+
+/* Skill group (e.g., Languages, Tools, etc.) */
+.skills__group {
+    margin-bottom: var(--space-m);
+}
+
+/* Skill group title - base styles */
+.skills__group-title {
+    font-weight: var(--fw-medium);
+    margin-bottom: var(--space-3xs);
+}
+
+/* Skill items list */
+.skills__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3xs) var(--space-2xs);
+    margin-bottom: var(--space-xs);
+}
+
+/* Individual skill item - base styles */
+.skills__item {
+    border-radius: var(--radius-sm);
+    padding: var(--space-3xs) var(--space-xs);
+    font-size: var(--fs-200);
+    background-color: var(--clr-neutral-100);
+    border: 1px solid var(--clr-neutral-300);
+    color: var(--clr-neutral-700);
+}
+
+/* Highlighted skill items - base styles */
+.skills__item__highlight {
+    font-weight: var(--fw-medium);
+}
+
+/* Programming highlighted skill items */
+.skills__content .skills__card:nth-child(1) .skills__item__highlight {
+    background-color: var(--clr-programming-500-095);
+    border: 1px solid var(--clr-programming-500-095);
+    color: var(--clr-neutral-100);
+}
+
+/* Mechanical Design highlighted skill items */
+.skills__content .skills__card:nth-child(2) .skills__item__highlight {
+    background-color: var(--clr-mechanical-400-080);
+    border: 1px solid var(--clr-mechanical-400-080);
+    color: var(--clr-neutral-100);
+}
+
+/* Electronics highlighted skill items */
+.skills__content .skills__card:nth-child(3) .skills__item__highlight {
+    background-color: var(--clr-electronics-500-090);
+    border: 1px solid var(--clr-electronics-500-090);
+    color: var(--clr-neutral-100);
+}
+
+/* Tablet styles (576 pixels and up) */
+@media (min-width: 576px) {
+    .skills {
+        --skills-padding-block-start: var(--space-xl);
+        --skills-padding-block-end: var(--space-l);
+    }
+
+    .skills__card {
+        padding: var(--space-l);
+    }
+
+    .skills__card-title {
+        font-size: var(--fs-600);
+    }
+
+    .skills__group-title {
+        font-size: var(--fs-400);
+    }
+
+    .skills__item {
+        font-size: var(--fs-300);
+    }
+}
+
+/* Desktop styles (992 pixels and up) */
+@media (min-width: 992px) {
+    .skills {
+        --skills-padding-block-start: var(--space-2xl);
+        --skills-padding-block-end: var(--space-xl);
+        --skills-card-gap: var(--space-m);
+    }
+
+    .skills__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two-column layout */
+        gap: var(--skills-card-gap);
+    }
+
+    /* Programming card takes the left column */
+    .skills__content .skills__card:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1 / span 2; /* Span both rows: this card will take the full height */
+    }
+
+    /* Mechanical Design card takes top-right */
+    .skills__content .skills__card:nth-child(2) {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    /* Electronics card takes bottom-right */
+    .skills__content .skills__card:nth-child(3) {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .skills__card {
+        height: 100%;
+    }
+}

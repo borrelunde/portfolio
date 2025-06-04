@@ -1,0 +1,12 @@
+/* Container Layout
+ *
+ * Provides a centered, width-constrained wrapper for page content. Consistent
+ * horizontal padding and maximum width that should be used throughout the site
+ * to maintain content alignment and readability.
+ */
+.container {
+    width: 100%;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}

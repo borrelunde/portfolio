@@ -1,0 +1,145 @@
+/*
+ * Typography Styles
+ *
+ * Defines the typographic hierarchy and responsive font sizing
+ * Creates a consistent visual rhythm throughout the site
+ * Applies the variables defined in fonts.css to HTML elements
+ */
+
+/*
+ * Base Typography
+ *
+ * Core typography settings for the body and headings
+ * Establishes the foundation for all text elements
+ */
+body {
+    font-family: var(--ff-primary);
+    line-height: var(--lh-normal);
+    color: var(--clr-neutral-800);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--ff-heading);
+    margin-bottom: var(--space-s);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-tight);
+}
+
+p {
+    margin-bottom: var(--space-s);
+}
+
+/*
+ * Heading Hierarchy - Mobile First (Default)
+ *
+ * Establishes the base size relationships between headings
+ * Larger sizes are defined in media queries for responsive scaling
+ */
+h1 {
+    font-size: var(--fs-800);
+}
+
+h2 {
+    font-size: var(--fs-600);
+    margin-bottom: var(--space-m);
+    position: relative; /* Required for absolute positioning of the underline */
+    display: inline-block; /* Constrains the underline width to the text */
+}
+
+/* Decorative underline for section headings */
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: calc(-1 * var(--space-3xs)); /* Gap between text and underline */
+    left: 0;
+    width: var(--heading-underline-width, 60px);
+    height: var(--heading-underline-height, 3px);
+    background-color: var(--clr-primary-700);
+}
+
+h3 {
+    font-size: var(--fs-500);
+}
+
+h4 {
+    font-size: var(--fs-300);
+}
+
+/*
+ * Utility Text Classes
+ *
+ * Special text styles for specific purposes
+ * Enhances visual hierarchy and improves content organization
+ */
+.section-intro {
+    font-size: var(--fs-400);
+    color: var(--clr-neutral-600);
+    margin-bottom: var(--space-m);
+    max-width: 100%; /* Full width on mobile, constrained on larger screens */
+}
+
+/*
+ * Responsive Typography - Tablet (576px and up)
+ *
+ * Increases font sizes and spacing for better readability on medium screens
+ * Adjusts decorative elements to maintain visual balance
+ */
+@media (min-width: 576px) {
+    h1 {
+        font-size: var(--fs-800);
+    }
+
+    h2 {
+        font-size: var(--fs-700);
+        margin-bottom: var(--space-l);
+    }
+
+    h2::after {
+        width: var(--heading-underline-width-tablet, 50px);
+        height: var(--heading-underline-height-tablet, 2px);
+        bottom: calc(-1 * var(--space-2xs));
+    }
+
+    h3 {
+        font-size: var(--fs-600);
+    }
+
+    h4 {
+        font-size: var(--fs-500);
+    }
+
+    .section-intro {
+        font-size: var(--fs-500);
+        margin-bottom: var(--space-l);
+    }
+}
+
+/*
+ * Responsive Typography - Desktop (992px and up)
+ *
+ * Further increases font sizes for larger screens
+ * Enhances visual hierarchy with more pronounced size differences
+ * Optimizes for comfortable reading on large displays
+ */
+@media (min-width: 992px) {
+    h1 {
+        font-size: var(--fs-900);
+    }
+
+    h2 {
+        font-size: var(--fs-800);
+    }
+
+    h2::after {
+        width: var(--heading-underline-width-desktop, 60px);
+        height: var(--heading-underline-height-desktop, 3px);
+    }
+
+    h3 {
+        font-size: var(--fs-700);
+    }
+
+    h4 {
+        font-size: var(--fs-600);
+    }
+}

@@ -1,0 +1,56 @@
+/*
+ * Animations, transition and animation custom properties.
+ */
+
+:root {
+    /*
+     * Transition Durations
+     *
+     * - fast: Quick transitions for subtle effects (hover states, small UI changes)
+     * - normal: Standard duration for most transitions (button states, form elements)
+     * - slow: Longer transitions for more dramatic effects (page transitions, modals)
+     */
+    --duration-fast: 200ms;
+    --duration-normal: 300ms;
+    --duration-slow: 500ms;
+
+    /*
+     * Easing Functions
+     *
+     * - default: General-purpose easing for most transitions
+     * - in-out: Smooth acceleration and deceleration for natural movement
+     * - in: Gradual acceleration for elements entering the viewport
+     * - out: Gradual deceleration for elements leaving the viewport
+     */
+    --ease-default: ease;
+    --ease-in-out: ease-in-out;
+    --ease-in: ease-in;
+    --ease-out: ease-out;
+
+    /*
+     * Common Transitions
+     *
+     * Predefined transition combinations for consistent UI behavior:
+     * - default: General-purpose transition for most elements
+     * - fast: Quick transition for subtle interactions
+     * - slow: Longer transition for more dramatic effects
+     * - transform: Specific transition for movement and scaling
+     * - opacity: Specific transition for fading elements
+     * - colors: Specific transition for color changes (backgrounds, text, borders)
+     * - shadow: Specific transition for elevation changes
+     * - interactive: Combined transition for interactive elements (buttons, links)
+     */
+    --transition-default: all var(--duration-normal) var(--ease-default);
+    --transition-fast: all var(--duration-fast) var(--ease-default);
+    --transition-slow: all var(--duration-slow) var(--ease-default);
+    --transition-transform: transform var(--duration-normal) var(--ease-default);
+    --transition-opacity: opacity var(--duration-normal) var(--ease-default);
+    --transition-colors: background-color var(--duration-normal) var(--ease-default),
+                         color var(--duration-normal) var(--ease-default),
+                         border-color var(--duration-normal) var(--ease-default);
+    --transition-shadow: box-shadow var(--duration-normal) var(--ease-default);
+    --transition-interactive: transform var(--duration-fast) var(--ease-out),
+                              background-color var(--duration-normal) var(--ease-default),
+                              color var(--duration-normal) var(--ease-default),
+                              box-shadow var(--duration-normal) var(--ease-default);
+}

@@ -1,0 +1,48 @@
+/*
+ * About Section
+ *
+ * Simple introduction of the portfolio with text content.
+ */
+
+.about {
+    /* Component-specific properties */
+    --about-padding-block-start: var(--space-m);
+    --about-padding-block-end: var(--space-m);
+    --about-bg-color: var(--clr-neutral-100);
+
+    /* Core styles */
+    padding-block: var(--about-padding-block-start) var(--about-padding-block-end);
+    background-color: var(--about-bg-color);
+}
+
+/* Content container */
+.about__content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Section title */
+.about__title {
+    margin-block-end: var(--space-m);
+}
+
+/* Main text content */
+.about__text {
+    width: 100%;
+}
+
+/* Tablet styles (576 pixels and up) */
+@media (min-width: 576px) {
+    .about {
+        --about-padding-block-start: var(--space-2xl);
+        --about-padding-block-end: var(--space-xl);
+    }
+}
+
+/* Desktop styles (992 pixels and up) */
+@media (min-width: 992px) {
+    .about {
+        --about-padding-block-start: var(--space-2xl);
+        --about-padding-block-end: var(--space-xl);
+    }
+}

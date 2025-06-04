@@ -1,0 +1,181 @@
+/*
+ * Interests Section
+ *
+ * Displays personal interests in a card-based layout.
+ * Uses a grid layout for tablet and desktop and a stacked layout mobile.
+ */
+
+.interests {
+    /* Component-specific properties */
+    --interests-padding-block-start: var(--space-m);
+    --interests-padding-block-end: var(--space-m);
+    --interests-bg-color: var(--clr-neutral-100);
+    --interests-card-gap: var(--space-m);
+
+    /* Core styles */
+    padding-block: var(--interests-padding-block-start) var(--interests-padding-block-end);
+    background-color: var(--interests-bg-color);
+}
+
+/* Interests content container */
+.interests__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--interests-card-gap);
+    width: 100%;
+}
+
+/* Interest category card - base styles */
+.interests__card {
+    background-color: var(--clr-neutral-200);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    padding: var(--space-m);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--space-m);
+}
+
+/* Interest card with image */
+.interests__card--image {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Interest card image container */
+.interests__card-image {
+    width: 100%;
+    margin-bottom: var(--space-s);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+.interests__card-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Interest card content */
+.interests__card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Interest category title */
+.interests__card-title {
+    margin-bottom: var(--space-s);
+    font-weight: var(--fw-semibold);
+    border-bottom: 1px solid var(--clr-primary-100);
+    padding-bottom: var(--space-2xs);
+}
+
+/* Programming colour for Nature & Hiking */
+.interests__card-title--nature-and-hiking {
+    color: var(--clr-programming-500);
+    border-bottom-color: var(--clr-programming-400);
+}
+
+/* Mechanical Design colour for Landscape Photography */
+.interests__card-title--landscape-photography {
+    color: var(--clr-mechanical-500);
+    border-bottom-color: var(--clr-mechanical-400);
+}
+
+/* Electronics colour for History */
+.interests__card-title--history {
+    color: var(--clr-electronics-500);
+    border-bottom-color: var(--clr-electronics-400);
+}
+
+/* Grey colour for other interests */
+.interests__card-title--other {
+    color: var(--clr-neutral-700);
+    border-bottom: 0; /* Other interests shouldn't have a bottom border */
+    margin-bottom: 0;
+}
+
+/* Description text */
+.interests__description {
+    color: var(--clr-neutral-700);
+    font-size: var(--fs-300);
+    margin-bottom: var(--space-s);
+}
+
+.interests__description:last-child {
+    margin-bottom: 0;
+}
+
+/* Tablet styles (576 pixels and up) */
+@media (min-width: 576px) {
+    .interests {
+        --interests-padding-block-start: var(--space-xl);
+        --interests-padding-block-end: var(--space-l);
+    }
+
+    .interests__card {
+        padding: var(--space-l);
+    }
+
+    .interests__card-title {
+        font-size: var(--fs-600);
+    }
+
+    /* Align the interests content in a grid layout following the template areas */
+    .interests__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas:
+            "nature-hiking    nature-hiking"
+            "landscape-photo  landscape-photo"
+            "geography        languages"
+            "chess            technology"
+            "history          history";
+        gap: var(--interests-card-gap);
+    }
+
+    /* Assign grid areas to each card */
+    .interests__content .interests__card:nth-child(1) {
+        grid-area: nature-hiking;
+    }
+
+    .interests__content .interests__card:nth-child(2) {
+        grid-area: landscape-photo;
+    }
+
+    .interests__content .interests__card:nth-child(3) {
+        grid-area: geography;
+    }
+
+    .interests__content .interests__card:nth-child(4) {
+        grid-area: languages;
+    }
+
+    .interests__content .interests__card:nth-child(5) {
+        grid-area: chess;
+    }
+
+    .interests__content .interests__card:nth-child(6) {
+        grid-area: technology;
+    }
+
+    .interests__content .interests__card:nth-child(7) {
+        grid-area: history;
+    }
+}
+
+/* Desktop styles (992 pixels and up) */
+@media (min-width: 992px) {
+    .interests {
+        --interests-padding-block-start: var(--space-2xl);
+        --interests-padding-block-end: var(--space-xl);
+        --interests-card-gap: var(--space-l);
+    }
+
+    .interests__card {
+        margin-bottom: 0;
+    }
+}
