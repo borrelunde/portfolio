@@ -25,6 +25,14 @@
     margin-bottom: var(--space-m);
 }
 
+/* Highlight note */
+.skills__highlight-note {
+    font-size: var(--fs-300);
+    color: var(--clr-neutral-600);
+    margin-bottom: var(--space-m);
+    font-style: italic;
+}
+
 /* Skills content container */
 .skills__content {
     display: flex;
