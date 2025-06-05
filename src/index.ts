@@ -127,6 +127,24 @@ function initProjectFilters(): void {
             belongsTo: 'Personal',
         },
         {
+            title: 'High Pressure Underwater Connectors',
+            description:
+                'Cable and bulkhead underwater connectors for high pressure marine applications. Used on Argus Remote Systems ROVs.',
+            category: 'mechanical',
+            tags: [
+                '3D Modelling',
+                'Technical Drawing',
+                'Static Stress Analysis',
+                'Pressure Tests',
+                'Ordering for Manufacture',
+                'Autodesk Fusion 360',
+                'Vacuum Casting',
+                'CNC Machining',
+            ],
+            isOpenSource: false,
+            belongsTo: 'SAIV AS',
+        },
+        {
             title: 'Alert System',
             description:
                 'Alert system for the APB5 automatic profiling system. The system monitors the status of the APB5 and sends e-mail alerts when certain conditions are met, such as profiling inactivity or if the station physically moves out of bounds.',
@@ -155,6 +173,22 @@ function initProjectFilters(): void {
                 'JS',
                 'SQL',
                 'Database'
+            ],
+            isOpenSource: false,
+            belongsTo: 'SAIV AS',
+        },
+        {
+            title: 'Satellite Network Communication Terminal Enclosure',
+            description:
+                'Designed, and ordered for manufacture, a robust enclosure for a satellite network communication terminal for the APB5 automatic profiling system. The environment is marine and must withstand permanent deployment in the ocean.',
+            category: 'mechanical',
+            tags: [
+                '3D Modelling',
+                'Technical Drawing',
+                'Static Stress Analysis',
+                'Autodesk Fusion 360',
+                'Ordering for Manufacture',
+                'CNC Machining',
             ],
             isOpenSource: false,
             belongsTo: 'SAIV AS',
@@ -291,65 +325,6 @@ function initProjectFilters(): void {
             isOpenSource: false,
             belongsTo: 'SAIV AS',
         },
-
-        // Mechanical Design Projects
-        {
-            title: 'High Pressure Underwater Connectors',
-            description:
-                'Cable and bulkhead underwater connectors for high pressure marine applications. Used on Argus Remote Systems ROVs.',
-            category: 'mechanical',
-            tags: [
-                '3D Modelling',
-                'Technical Drawing',
-                'Static Stress Analysis',
-                'Pressure Tests',
-                'Ordering for Manufacture',
-                'Autodesk Fusion 360',
-                'Vacuum Casting',
-                'CNC Machining',
-            ],
-            isOpenSource: false,
-            belongsTo: 'SAIV AS',
-        },
-        {
-            title: 'Satellite Network Communication Terminal Enclosure',
-            description:
-                'Designed, and ordered for manufacture, a robust enclosure for a satellite network communication terminal for the APB5 automatic profiling system. The environment is marine and must withstand permanent deployment in the ocean.',
-            category: 'mechanical',
-            tags: [
-                '3D Modelling',
-                'Technical Drawing',
-                'Static Stress Analysis',
-                'Autodesk Fusion 360',
-                'Ordering for Manufacture',
-                'CNC Machining',
-            ],
-            isOpenSource: false,
-            belongsTo: 'SAIV AS',
-        },
-
-        // Electronics Projects
-        {
-            title: 'Remote Controller Unit',
-            description:
-                'Design and implementation of a remote controller for the APB5 automatic profiling system.',
-            category: 'electronics',
-            tags: [
-                'Circuit Design',
-                'PCB Design',
-                'Prototyping',
-                'Digital Electronics',
-                'Embedded Systems Programming',
-                'Serial Communication',
-                'Batteries',
-                'C',
-                'PIC Controller',
-                '3D Printing',
-                'Design Enclosure',
-            ],
-            isOpenSource: false,
-            belongsTo: 'SAIV AS',
-        },
         {
             title: 'Battery Controller Unit Electronics',
             description:
@@ -370,6 +345,27 @@ function initProjectFilters(): void {
             isOpenSource: false,
             belongsTo: 'SAIV AS',
         },
+        {
+            title: 'Remote Controller Unit',
+            description:
+                'Design and implementation of a remote controller for the APB5 automatic profiling system.',
+            category: 'electronics',
+            tags: [
+                'Circuit Design',
+                'PCB Design',
+                'Prototyping',
+                'Digital Electronics',
+                'Embedded Systems Programming',
+                'Serial Communication',
+                'Batteries',
+                'C',
+                'PIC Controller',
+                '3D Printing',
+                'Design Enclosure',
+            ],
+            isOpenSource: false,
+            belongsTo: 'SAIV AS',
+        }
     ];
 
     /**
