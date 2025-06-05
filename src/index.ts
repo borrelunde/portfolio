@@ -107,6 +107,16 @@ function initProjectFilters(): void {
     const projects: Project[] = [
         // Programming Projects
         {
+            title: 'Portfolio Website',
+            description:
+                'This personal portfolio website.',
+            category: 'programming',
+            tags: ['HTML', 'CSS', 'TypeScript', 'Vite', 'GitHub Pages', 'Open Source'],
+            isOpenSource: true,
+            githubLink: 'https://github.com/borrelunde/portfolio',
+            belongsTo: 'Personal',
+        },
+        {
             title: 'Scipio',
             description:
                 'A lightweight, open-source, Try/Catch monad for concise functional exception handling in Java.',
