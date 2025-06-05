@@ -347,6 +347,23 @@ function initProjectFilters(): void {
             belongsTo: 'SAIV AS',
         },
         {
+            title: 'Optional Sensor Unit 106 Casting Mold',
+            description:
+                'Designed, drew, and ordered for manufacture a set of casting mold parts for the Optional Sensor Unit 106 (OSU106) with improvements to the previous design. Used in the production of the OSU106.',
+            category: 'mechanical',
+            tags: [
+                '3D Modelling',
+                'Technical Drawing',
+                'Ordering for Manufacture',
+                'CNC Machining',
+                'Autodesk Fusion 360',
+                'Press Fitting',
+                'Casting'
+            ],
+            isOpenSource: false,
+            belongsTo: 'SAIV AS',
+        },
+        {
             title: 'Conductivity Sensor Controller Unit',
             description:
                 'Conductivity sensor controller unit for oceanographic instruments. The unit measures the conductivity of water and communicates the data to the main controller unit via serial communication.',
