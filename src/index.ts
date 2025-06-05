@@ -145,6 +145,25 @@ function initProjectFilters(): void {
             belongsTo: 'SAIV AS',
         },
         {
+            title: 'Pressure Vessel',
+            description:
+                'Designed, drew, statically stress analysed, and ordered for manufacture a pressure vessel for liquid in-house pressure testing of high pressure underwater connectors. Designed to withstand pressures of up to 1200 bar. Conducted real-world testing to approximately 900 bar.',
+            category: 'mechanical',
+            tags: [
+                '3D Modelling',
+                'Technical Drawing',
+                'Static Stress Analysis',
+                'Ordering for Manufacture',
+                'CNC Machining',
+                'Autodesk Fusion 360',
+                'High Pressure',
+                'Sealing',
+                'Real-world Testing'
+            ],
+            isOpenSource: false,
+            belongsTo: 'SAIV AS',
+        },
+        {
             title: 'Alert System',
             description:
                 'Alert system for the APB5 automatic profiling system. The system monitors the status of the APB5 and sends e-mail alerts when certain conditions are met, such as profiling inactivity or if the station physically moves out of bounds.',
@@ -221,6 +240,37 @@ function initProjectFilters(): void {
                 'Cloud API',
                 'Data Parsing',
                 'Data Conversion',
+            ],
+            isOpenSource: false,
+            belongsTo: 'SAIV AS',
+        },
+        {
+            title: 'APB5 Internal Electronics Enclosure',
+            description:
+                'Designed, drew, and ordered for manufacture enclosures for internal electronic equipment used in the APB5 automatic profiling system. It is not exposed to heavy marine conditions, but must withstand light saltwater exposure over time.',
+            category: 'mechanical',
+            tags: [
+                '3D Modelling',
+                'Technical Drawing',
+                'Ordering for Manufacture',
+                'CNC Machining',
+                'Autodesk Fusion 360',
+                'Sealing'
+            ],
+            isOpenSource: false,
+            belongsTo: 'SAIV AS',
+        },
+        {
+            title: 'DCPS Deployment Fixture',
+            description:
+                'Designed, drew, and ordered for manufacture a deployment fixture for the Doppler Current Profiler Sensor (DCPS) used in the APB5 automatic profiling system. It is used to deploy the DCPS from the profiling station in the engaged position, and to transport it in the retracted position.',
+            category: 'mechanical',
+            tags: [
+                '3D Modelling',
+                'Technical Drawing',
+                'Ordering for Manufacture',
+                'CNC Machining',
+                'Autodesk Fusion 360',
             ],
             isOpenSource: false,
             belongsTo: 'SAIV AS',
