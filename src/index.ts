@@ -333,6 +333,22 @@ function initProjectFilters(): void {
             belongsTo: 'SAIV AS',
         },
         {
+            title: 'Temperature Sensor Array Casting Mold',
+            description:
+                'Designed, drew, and ordered for manufacture a casting mold for an array of temperature sensors used in oceanographic instruments, such as the CTD Model SD204 and SD208. It is used to produce the sensor housing.',
+            category: 'mechanical',
+            tags: [
+                '3D Modelling',
+                'Technical Drawing',
+                'Ordering for Manufacture',
+                'CNC Machining',
+                'Autodesk Fusion 360',
+                'Casting'
+            ],
+            isOpenSource: false,
+            belongsTo: 'SAIV AS',
+        },
+        {
             title: 'DCPS and WS Controller Unit',
             description:
                 'Controller for the Doppler Current Profiler Sensor (DCPS) and wave sensor (WS) in the APB5 automatic profiling system. It operates the sensors and communicates with serial communication to a data transmitter unit to send the data to an FTP server.',
