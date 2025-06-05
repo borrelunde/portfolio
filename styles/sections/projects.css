@@ -237,6 +237,99 @@
     font-size: var(--fs-400);
 }
 
+/* Pagination container */
+.projects__pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-2xs);
+    margin-top: var(--space-m);
+    flex-wrap: wrap;
+}
+
+/* Pagination button */
+.projects__pagination-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 2.5rem;
+    height: 2.5rem;
+    padding: 0 var(--space-xs);
+    border-radius: var(--radius-sm);
+    background-color: var(--clr-neutral-100);
+    border: 1px solid var(--clr-neutral-300);
+    color: var(--clr-neutral-700);
+    font-size: var(--fs-300);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+/* Pagination button hover state */
+.projects__pagination-btn:hover:not(:disabled):not(.active) {
+    background-color: var(--clr-neutral-200);
+    border-color: var(--clr-neutral-400);
+}
+
+/* Pagination button focus state */
+.projects__pagination-btn:focus-visible {
+    outline: 2px solid var(--clr-primary-500);
+    outline-offset: 2px;
+}
+
+/* Pagination button active state */
+.projects__pagination-btn.active {
+    background-color: var(--clr-primary-500);
+    border-color: var(--clr-primary-500);
+    color: var(--clr-neutral-100);
+    font-weight: var(--fw-medium);
+}
+
+/* Pagination button disabled state */
+.projects__pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Pagination ellipsis */
+.projects__pagination-ellipsis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 2.5rem;
+    height: 2.5rem;
+    color: var(--clr-neutral-600);
+    font-size: var(--fs-300);
+}
+
+/* Previous/Next pagination buttons */
+.projects__pagination-prev,
+.projects__pagination-next {
+    font-size: var(--fs-200);
+}
+
+/* Mobile styles (under 576 pixels) */
+@media (max-width: 575px) {
+    /* Adjust pagination for small screens */
+    .projects__pagination {
+        gap: var(--space-3xs);
+    }
+
+    .projects__pagination-btn {
+        min-width: 2rem;
+        height: 2rem;
+        padding: 0 var(--space-2xs);
+        font-size: var(--fs-200);
+    }
+
+    /* Hide some pagination elements on very small screens */
+    @media (max-width: 360px) {
+        .projects__pagination-ellipsis {
+            display: none;
+        }
+    }
+}
+
 /* Tablet styles (576 pixels and up) */
 @media (min-width: 576px) {
     .projects {
