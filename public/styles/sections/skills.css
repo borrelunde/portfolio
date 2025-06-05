@@ -45,6 +45,11 @@
     border-top: 3px solid transparent;
 }
 
+/* Work Philosophy card - special styling */
+.skills__card--philosophy {
+    background-color: var(--clr-neutral-100);
+}
+
 /* Skill category title */
 .skills__card-title {
     margin-bottom: var(--space-s);
@@ -71,10 +76,23 @@
     border-bottom-color: var(--clr-electronics-400);
 }
 
+/* Work Philosophy card title */
+.skills__content .skills__card:nth-child(4) .skills__card-title {
+    color: var(--clr-neutral-700);
+    border-bottom-color: var(--clr-neutral-400);
+}
+
 /* Description text */
 .skills__description {
     color: var(--clr-neutral-700);
     font-size: var(--fs-300);
+}
+
+/* Philosophy text */
+.skills__philosophy-text {
+    color: var(--clr-neutral-700);
+    font-size: var(--fs-300);
+    margin-bottom: var(--space-xs);
 }
 
 /* Skill group (e.g., Languages, Tools, etc.) */
@@ -154,6 +172,18 @@
     .skills__item {
         font-size: var(--fs-300);
     }
+
+    /* Work Philosophy items in two columns */
+    .skills__card--philosophy .skills__description {
+        margin-bottom: var(--space-m);
+    }
+
+    /* Style for the philosophy items container */
+    .skills__card--philosophy .skills__philosophy-items {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two columns */
+        gap: var(--space-m); /* Gap between items */
+    }
 }
 
 /* Desktop styles (992 pixels and up) */
@@ -167,13 +197,14 @@
     .skills__content {
         display: grid;
         grid-template-columns: 1fr 1fr; /* Two-column layout */
+        grid-template-rows: auto auto auto;
         gap: var(--skills-card-gap);
     }
 
-    /* Programming card takes the left column */
+    /* Programming card takes the left column, top */
     .skills__content .skills__card:nth-child(1) {
         grid-column: 1;
-        grid-row: 1 / span 2; /* Span both rows: this card will take the full height */
+        grid-row: 1 / span 2; /* Span two rows */
     }
 
     /* Mechanical Design card takes top-right */
@@ -182,10 +213,16 @@
         grid-row: 1;
     }
 
-    /* Electronics card takes bottom-right */
+    /* Electronics card takes middle-right */
     .skills__content .skills__card:nth-child(3) {
         grid-column: 2;
         grid-row: 2;
+    }
+
+    /* Work Philosophy card takes the bottom, spans both columns */
+    .skills__content .skills__card:nth-child(4) {
+        grid-column: 1 / span 2;
+        grid-row: 3;
     }
 
     .skills__card {
