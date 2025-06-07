@@ -121,6 +121,11 @@
     color: var(--clr-neutral-700);
 }
 
+/* Resume item content paragraphs */
+.resume__item-content p {
+    margin-bottom: var(--space-3xs); /* A little space between paragraphs to break up the descriptions */
+}
+
 /* Resume item highlights */
 .resume__item-highlights {
     margin-top: var(--space-xs);
