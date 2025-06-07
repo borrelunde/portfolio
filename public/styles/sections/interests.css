@@ -46,7 +46,7 @@
 /* Interest card image container */
 .interests__card-image {
     width: 100%;
-    margin-bottom: var(--space-s);
+    margin-bottom: 0; /* Allow the caption and credit close to the image */
     border-radius: var(--radius-sm);
     overflow: hidden;
 }
@@ -56,6 +56,27 @@
     height: auto;
     display: block;
     object-fit: cover;
+}
+
+/* Interest card image caption and credit container */
+.interests__card-image-content {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-3xs) var(--space-3xs);
+    margin: 0 0 var(--space-s);
+}
+
+.interests__image-caption {
+    color: var(--clr-neutral-700);
+    font-size: var(--fs-200);
+    margin-bottom: var(--space-3xs);
+}
+
+.interests__image-credit {
+    color: var(--clr-neutral-600);
+    font-size: var(--fs-200);
+    padding: 0;
+    margin-bottom: 0;
 }
 
 /* Interest card content */
@@ -121,6 +142,18 @@
 
     .interests__card-title {
         font-size: var(--fs-600);
+    }
+
+    .interests__card-image-content {
+        padding: var(--space-xs) var(--space-xs);
+    }
+
+    .interests__image-caption {
+        font-size: var(--fs-300);
+    }
+
+    .interests__image-credit {
+        font-size: var(--fs-300);
     }
 
     /* Align the interests content in a grid layout following the template areas */
