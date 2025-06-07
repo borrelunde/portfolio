@@ -31,6 +31,7 @@
      * - preferred: The ideal size that scales with viewport width
      * - max: The largest size, preventing excessive scaling on large screens
      */
+    --fs-100: clamp(0.625rem, 0.625rem + 0.125vw, 0.75rem);
     --fs-200: clamp(0.75rem, 0.75rem, 0.75rem);
     --fs-300: clamp(0.875rem, 0.875rem, 0.875rem);
     --fs-400: 1rem; /* Base size (1 rem is 16 pixels) */
