@@ -79,6 +79,21 @@
     margin-bottom: 0;
 }
 
+/* Interest card video container */
+.interests__card-video {
+    width: 100%;
+    border-radius: var(--radius-sm);
+}
+
+.interests__card-video iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; /* Maintain the 16:9 aspect ratio of the video */
+    border: none; /* Remove borders for a clean look */
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-lg);
+}
+
 /* Interest card content */
 .interests__card-content {
     display: flex;
@@ -110,6 +125,13 @@
     color: var(--clr-electronics-500);
     border-bottom-color: var(--clr-electronics-400);
 }
+
+/* Programming colour for Music */
+.interests__card-title--music {
+    color: var(--clr-programming-500);
+    border-bottom-color: var(--clr-programming-400);
+}
+
 
 /* Grey colour for other interests */
 .interests__card-title--other {
@@ -160,13 +182,14 @@
     .interests__content {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(4, auto);
+        grid-template-rows: repeat(5, auto);
         grid-template-areas:
             "nature-hiking    nature-hiking"
             "landscape-photo  landscape-photo"
             "geography        languages"
             "chess            technology"
-            "history          history";
+            "history          history"
+            "music            music";
         gap: var(--interests-card-gap);
     }
 
@@ -197,6 +220,10 @@
 
     .interests__content .interests__card:nth-child(7) {
         grid-area: history;
+    }
+
+    .interests__content .interests__card:nth-child(8) {
+        grid-area: music;
     }
 }
 
