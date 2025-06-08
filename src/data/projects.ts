@@ -12,10 +12,11 @@ export interface Project {
 }
 
 /**
- * Array of project data
+ * Array of project data, a mix of personal and work projects across various
+ * categories over time. More or less in chronological order from oldest to
+ * newest, but not strictly.
  */
 export const projects: Project[] = [
-    // Programming Projects
     {
         title: 'Portfolio Website',
         description:
