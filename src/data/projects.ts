@@ -76,7 +76,7 @@ export const projects: Project[] = [
     {
         title: 'Alert System',
         description:
-            'Alert system for the APB5 automatic profiling system. The system monitors the status of the APB5 and sends e-mail alerts when certain conditions are met, such as profiling inactivity or if the station physically moves out of bounds.',
+            'Alert system for the SAIV APB5 automatic profiling system. The system monitors the status of the SAIV APB5 and sends e-mail alerts when certain conditions are met, such as profiling inactivity or if the station physically moves out of bounds.',
         category: 'programming',
         tags: [
             'Java',
@@ -93,7 +93,7 @@ export const projects: Project[] = [
     {
         title: 'Profiling System Station Activity Dashboard',
         description:
-            'Web-based dashboard for monitoring the activity status of the APB5 automatic profiling systems. The dashboard displays real-time data from the profiling system, such as current position, last profile information, and more.',
+            'Web-based dashboard for monitoring the activity status of the SAIV APB5 automatic profiling systems. The dashboard displays real-time data from the profiling system, such as current position, last profile information, and more.',
         category: 'programming',
         tags: [
             'PHP',
@@ -109,7 +109,7 @@ export const projects: Project[] = [
     {
         title: 'Satellite Network Communication Terminal Enclosure',
         description:
-            'Designed, and ordered for manufacture, a robust enclosure for a satellite network communication terminal for the APB5 automatic profiling system. The environment is marine and must withstand permanent deployment in the ocean.',
+            'Designed, and ordered for manufacture, a robust enclosure for a satellite network communication terminal for the SAIV APB5 automatic profiling system. The environment is marine and must withstand permanent deployment in the ocean.',
         category: 'mechanical',
         tags: [
             '3D Modelling',
@@ -125,7 +125,7 @@ export const projects: Project[] = [
     {
         title: 'Profiling System Station Control Dashboard',
         description:
-            'Web-based dashboard for controlling the APB5 automatic profiling systems. The dashboard allows users to visualize data, start and stop profiles, set parameters, monitor the status of the profiling system and its subsystems, export data in CSV format, and more.',
+            'Web-based dashboard for controlling the SAIV APB5 automatic profiling systems. The dashboard allows users to visualize data, start and stop profiles, set parameters, monitor the status of the profiling system and its subsystems, export data in CSV format, and more.',
         category: 'programming',
         tags: [
             'PHP',
@@ -155,9 +155,9 @@ export const projects: Project[] = [
         belongsTo: 'SAIV AS',
     },
     {
-        title: 'APB5 Internal Electronics Enclosure',
+        title: 'SAIV APB5 Internal Electronics Enclosure',
         description:
-            'Designed, drew, and ordered for manufacture enclosures for internal electronic equipment used in the APB5 automatic profiling system. It is not exposed to heavy marine conditions, but must withstand light saltwater exposure over time.',
+            'Designed, drew, and ordered for manufacture enclosures for internal electronic equipment used in the SAIV APB5 automatic profiling system. It is not exposed to heavy marine conditions, but must withstand light saltwater exposure over time.',
         category: 'mechanical',
         tags: [
             '3D Modelling',
@@ -171,9 +171,9 @@ export const projects: Project[] = [
         belongsTo: 'SAIV AS',
     },
     {
-        title: 'DCPS Deployment Fixture',
+        title: 'AADI DCPS Deployment Fixture',
         description:
-            'Designed, drew, and ordered for manufacture a deployment fixture for the Doppler Current Profiler Sensor (DCPS) used in the APB5 automatic profiling system. It is used to deploy the DCPS from the profiling station in the engaged position, and to transport it in the retracted position.',
+            'Designed, drew, and ordered for manufacture a deployment fixture for the Aanderaa Data Instruments (AADI) Doppler Current Profiler Sensor (DCPS) used in the SAIV APB5 automatic profiling system. It is used to deploy the DCPS from the profiling station in the engaged position, and to transport it in the retracted position.',
         category: 'mechanical',
         tags: [
             '3D Modelling',
@@ -188,7 +188,7 @@ export const projects: Project[] = [
     {
         title: 'Data Retention',
         description:
-            'Data retention for the APB5 automatic profiling system. Real-world data is extracted from an FTP server and stored in a database. The data is then used for many purposes, such as monitoring and visualizing the data.',
+            'Data retention for the SAIV APB5 automatic profiling system. Real-world data is extracted from an FTP server and stored in a database. The data is then used for many purposes, such as monitoring and visualizing the data.',
         category: 'programming',
         tags: ['Java', 'Gradle', 'JUnit', 'Database', 'SQL', 'FTP', 'Parsing'],
         isOpenSource: false,
@@ -197,7 +197,7 @@ export const projects: Project[] = [
     {
         title: 'Winch Controller Unit',
         description:
-            'Improved the winch controller for a stand-alone brushless DC motor winch. The winch is primarily used in the APB5 profiling system to deploy and retrieve the CTD (oceanography sonde) from the water.',
+            'Improved the winch controller for a stand-alone brushless DC motor winch. The winch is primarily used in the SAIV APB5 profiling system to deploy and retrieve the SAIV CTD (Conductivity, Temperature, and Depth) oceanographic sonde from the water.',
         category: 'programming',
         tags: [
             'C',
@@ -212,7 +212,7 @@ export const projects: Project[] = [
     {
         title: 'Battery Controller Unit',
         description:
-            'Controller for batteries in the APB5 automatic profiling system. The controller monitors the battery voltage and controls the charging and discharging of the batteries to ensure optimal performance and longevity. Logs various data during and between profiles for  analysis and monitoring.',
+            'Controller for batteries in the SAIV APB5 automatic profiling system. The controller monitors the battery voltage and controls the charging and discharging of the batteries to ensure optimal performance and longevity. Logs various data during and between profiles for  analysis and monitoring.',
         category: 'programming',
         tags: [
             'C',
@@ -230,7 +230,7 @@ export const projects: Project[] = [
     {
         title: 'Power Controller and Watchdog Unit',
         description:
-            'Improved the power controller for the APB5 automatic profiling system that distributes power to other units in the system based on the serial input from the main controller. Watchdog functionality ensures the system is running correctly and to reset the system if it is not.',
+            'Improved the power controller for the SAIV APB5 automatic profiling system that distributes power to other units in the system based on the serial input from the main controller. Watchdog functionality ensures the system is running correctly and to reset the system if it is not.',
         category: 'programming',
         tags: [
             'C',
@@ -245,7 +245,7 @@ export const projects: Project[] = [
     {
         title: 'Temperature Sensor Array Casting Mold',
         description:
-            'Designed, drew, and ordered for manufacture a casting mold for an array of temperature sensors used in oceanographic instruments, such as the CTD Model SD204 and SD208. It is used to produce the sensor housing.',
+            'Designed, drew, and ordered for manufacture a casting mold for an array of temperature sensors used in oceanographic instruments, such as the SAIV CTD Model SD204 and SD208. It is used to produce the sensor housing.',
         category: 'mechanical',
         tags: [
             '3D Modelling',
@@ -259,9 +259,9 @@ export const projects: Project[] = [
         belongsTo: 'SAIV AS',
     },
     {
-        title: 'DCPS and WS Controller Unit',
+        title: 'AADI DCPS and AADI WS Controller Unit',
         description:
-            'Controller for the Doppler Current Profiler Sensor (DCPS) and wave sensor (WS) in the APB5 automatic profiling system. It operates the sensors and communicates with serial communication to a data transmitter unit to send the data to an FTP server.',
+            'Controller for the Aanderaa Data Instruments (AADI) Doppler Current Profiler Sensor (DCPS) and Aanderaa Data Instruments (AADI) Wave Sensor (WS) in the SAIV APB5 automatic profiling system. It operates the sensors and communicates with serial communication to a data transmitter unit to send the data to an FTP server.',
         category: 'programming',
         tags: [
             'C/C++',
@@ -273,9 +273,9 @@ export const projects: Project[] = [
         belongsTo: 'SAIV AS',
     },
     {
-        title: 'Optional Sensor Unit 106 Casting Mold',
+        title: 'SAIV OSU106 Casting Mold',
         description:
-            'Designed, drew, and ordered for manufacture a set of casting mold parts for the Optional Sensor Unit 106 (OSU106) with improvements to the previous design. Used in the production of the OSU106.',
+            'Designed, drew, and ordered for manufacture a set of casting mold parts for the SAIV Optional Sensor Unit 106 (OSU106) with improvements to the previous design. Used in the production of the OSU106.',
         category: 'mechanical',
         tags: [
             '3D Modelling',
@@ -341,7 +341,7 @@ export const projects: Project[] = [
     {
         title: 'Remote Controller Unit',
         description:
-            'Design and implementation of a remote controller for the APB5 automatic profiling system.',
+            'Design and implementation of a remote controller for the SAIV APB5 automatic profiling system.',
         category: 'electronics',
         tags: [
             'Circuit Design',
