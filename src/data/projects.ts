@@ -109,7 +109,7 @@ export const projects: Project[] = [
     {
         title: 'Alert System',
         description:
-            'Developed an alert system for the SAIV APB5 profiling stations. The system monitors the operational status of the stations and sends e-mail alerts when specific conditions are met — such as prolonged profiling inactivity or physical displacement beyond defined geographic bounds.',
+            'Developed an alert system for the SAIV APB5 profiling stations. The system monitors the operational status of the stations and sends e-mail alerts when specific conditions are met — such as profiling inactivity or physical displacement beyond dynamic geographic bounds.',
         category: 'programming',
         tags: [
             'Java',
