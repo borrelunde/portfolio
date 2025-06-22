@@ -38,9 +38,9 @@ export const projects: Project[] = [
         belongsTo: 'Personal',
     },
     {
-        title: 'Very High-Pressure Underwater Connectors',
+        title: 'Very High Pressure Underwater Connectors',
         description:
-            'Collaborated on the design, 3D modelled, technically drawn, statically stress analysed, ordered for manufacture, and real-world pressure tested electrical underwater cable and bulkhead connectors for very-high-pressure marine applications. Used on Argus Remote Systems\' ROVs (Remotely Operated Vehicles).',
+            'Electrical underwater cable and bulkhead connectors for very high pressure marine applications.',
         category: 'mechanical',
         tags: [
             '3D Modelling',
@@ -56,14 +56,13 @@ export const projects: Project[] = [
         belongsTo: 'SAIV AS',
     },
     {
-        title: 'Very High-Pressure Cable Connector Moulds',
+        title: 'Very High Pressure Cable Connector Moulds',
         description:
-            'Designed, 3D modelled, technically drawn, and ordered for manufacture casting moulds for producing over-moulded joints between underwater electrical cables and connectors, used in very high-pressure marine environments.',
+            'Casting moulds for over-moulded joints between underwater electrical cables and connectors.',
         category: 'mechanical',
         tags: [
             '3D Modelling',
             'Technical Drawing',
-            'Mould Design',
             'Over-moulding',
             'Ordering for Manufacture',
             'Autodesk Fusion 360',
@@ -76,7 +75,7 @@ export const projects: Project[] = [
     {
         title: 'CTD Model SD204/SD208 Conductivity Cell Hole Boring Fixture',
         description:
-            'Collaborated on the design, 3D modelled, technically drawn, and 3D printed a precision boring fixture used in the production of the CTD Models SD204 and SD208. Ensures accurate hole boring for the conductivity cell.',
+            'Boring fixture used in the production of the SAIV CTD Models SD204 and SD208. Ensures accurate hole boring for the conductivity cell.',
         category: 'mechanical',
         tags: [
             '3D Modelling',
@@ -90,7 +89,7 @@ export const projects: Project[] = [
     {
         title: 'Pressure Vessel',
         description:
-            'Designed, 3D modelled, technically drawn, statically stress analysed, and ordered for manufacture a pressure vessel for liquid in-house pressure testing of high-pressure underwater connectors. Designed to withstand pressures of up to 1,200 bar. Conducted real-world testing to approximately 900 bar.',
+            'Pressure vessel for liquid in-house pressure testing of high-pressure underwater connectors. Designed to withstand pressures of up to 1,200 bar.',
         category: 'mechanical',
         tags: [
             '3D Modelling',
@@ -109,7 +108,7 @@ export const projects: Project[] = [
     {
         title: 'Alert System',
         description:
-            'Developed an alert system for the SAIV APB5 profiling stations. The system monitors the operational status of the stations and sends e-mail alerts when specific conditions are met — such as profiling inactivity or physical displacement beyond dynamic geographic bounds.',
+            'Alert system for the SAIV APB5 profiling stations. Monitors the operational status of the stations and sends alerts when specific conditions are met.',
         category: 'programming',
         tags: [
             'Java',
@@ -126,7 +125,7 @@ export const projects: Project[] = [
     {
         title: 'Profiling System Station Activity Dashboard',
         description:
-            'Web-based dashboard for monitoring the activity status of the SAIV APB5 automatic profiling systems. Displays real-time information such as the current position, the last and next profile information, and other system status indicators.',
+            'Web-based dashboard for monitoring the activity status of the SAIV APB5 automatic profiling systems. Displays real-time information such as the current position, the last and next profile information, and more.',
         category: 'programming',
         tags: [
             'PHP',
@@ -142,7 +141,7 @@ export const projects: Project[] = [
     {
         title: 'Satellite Network Communication Terminal Enclosure',
         description:
-            'Designed, 3D modelled, technically drawn, statically stress analysed, and ordered for manufacture a robust enclosure for a satellite network communication terminal for the SAIV APB5 automatic profiling system. The enclosure is intended for deployment in marine environments — such as fjords, coastal seas, and inlets — mounted above the waterline on the buoy, and is built to withstand saltwater exposure and wave impact.',
+            'Robust enclosure for a satellite network communication terminal for the SAIV APB5 automatic profiling system.',
         category: 'mechanical',
         tags: [
             '3D Modelling',
@@ -159,7 +158,7 @@ export const projects: Project[] = [
     {
         title: 'Profiling System Station Control Dashboard',
         description:
-            'Web-based dashboard for controlling the SAIV APB5 automatic profiling systems. Enables users to visualize data, start and stop profiles, set parameters, monitor system and subsystem status, and export data in CSV format.',
+            'Web-based dashboard for controlling the SAIV APB5 automatic profiling systems. Enables users to visualize data, start and stop profiles, set parameters, monitor system and subsystem status, and export data.',
         category: 'programming',
         tags: [
             'PHP',
@@ -175,7 +174,7 @@ export const projects: Project[] = [
     {
         title: 'Pressure Sensor Data Extractor and Converter',
         description:
-            'Developed a desktop application for internal use to bridge the gap between cloud-based data and existing pressure sensor calibration equipment. The application retrieves and parses pressure sensor data from the cloud and converts it into a format compatible with equipment used in the calibration of oceanographic instruments.',
+            'Desktop application for internal use to bridge the gap between cloud-based data and existing pressure sensor calibration equipment.',
         category: 'programming',
         tags: [
             'C#',
@@ -193,7 +192,7 @@ export const projects: Project[] = [
     {
         title: 'SAIV APB5 Internal Electronics Enclosure',
         description:
-            'Designed, 3D modelled, technically drawn, and ordered for manufacture enclosures for internal electronic equipment used in the SAIV APB5 profiling stations. These enclosures are not exposed to harsh marine conditions but are designed to withstand light saltwater exposure over time.',
+            'Enclosures for internal electronic equipment used in the SAIV APB5 profiling stations.',
         category: 'mechanical',
         tags: [
             '3D Modelling',
@@ -209,7 +208,7 @@ export const projects: Project[] = [
     {
         title: 'SAIV APB5 Buoyancy Ring',
         description:
-            '3D modelled, technically drawn, and collaborated in manufacturing preparation of buoyancy rings for the SAIV APB5 profiling stations. Designed to increase overall buoyancy and improve the surface stability of the buoy in marine environments.',
+            'Buoyancy rings for the SAIV APB5 profiling stations. Designed to increase buoyancy and improve the surface stability.',
         category: 'mechanical',
         tags: [
             '3D Modelling',
@@ -222,7 +221,7 @@ export const projects: Project[] = [
     {
         title: 'AADI DCPS Deployment Fixture',
         description:
-            'Designed, technically drawn, and ordered for manufacture a deployment fixture for the Aanderaa Data Instruments (AADI) Doppler Current Profiler Sensor (DCPS) used in the SAIV APB5 automatic profiling system. It is used to deploy the DCPS from the profiling station in the engaged position and to transport it in the retracted position.',
+            'Deployment fixture for the Aanderaa Data Instruments (AADI) Doppler Current Profiler Sensor (DCPS) used in the SAIV APB5 automatic profiling system.',
         category: 'mechanical',
         tags: [
             '3D Modelling',
@@ -237,16 +236,26 @@ export const projects: Project[] = [
     {
         title: 'Data Retention',
         description:
-            'Developed a backend service for the SAIV APB5 automatic profiling system to ensure persistent storage of real-world profiling data. The service retrieves raw data from an FTP server, parses and validates it to ensure data integrity, and inserts clean records into a database for use in downstream applications — such as monitoring, visualization, and reporting.',
+            'Backend service for the SAIV APB5 automatic profiling system to ensure persistent storage of real-world profiling data. Retrieves data from an FTP server, parses and validates it, and inserts records into a database for use in downstream applications.',
         category: 'programming',
-        tags: ['Java', 'Gradle', 'JUnit', 'Database', 'SQL', 'FTP', 'Data Parsing', 'Data Validation', 'Backend Service'],
+        tags: [
+            'Java',
+            'Gradle',
+            'JUnit',
+            'Database',
+            'SQL',
+            'FTP',
+            'Data Parsing',
+            'Data Validation',
+            'Backend Service'
+        ],
         isOpenSource: false,
         belongsTo: 'SAIV AS',
     },
     {
         title: 'Winch Controller Unit',
         description:
-            'Improved the controller software for a stand-alone brushless DC motor winch used in the SAIV APB5 profiling system. The winch deploys and retrieves the SAIV CTD (Conductivity, Temperature, and Depth) oceanographic sonde from the water during profiling operations.',
+            'Controller software for a stand-alone brushless DC motor winch used in the SAIV APB5 profiling system. Deploys and retrieves the SAIV CTD (Conductivity, Temperature, and Depth) oceanographic sonde from the water during profiling operations.',
         category: 'programming',
         tags: [
             'C',
@@ -261,7 +270,7 @@ export const projects: Project[] = [
     {
         title: 'Battery Controller Unit',
         description:
-            'Developed a controller for managing batteries in the SAIV APB5 automatic profiling system. The controller monitors battery voltage, manages charging and discharging to ensure optimal performance and longevity, and logs operational data during and between profiles for analysis and monitoring.',
+            'Controller for managing batteries in the SAIV APB5 automatic profiling system. Monitors battery voltage, manages charging and discharging, and logs data during and between profiles.',
         category: 'programming',
         tags: [
             'C',
@@ -279,7 +288,7 @@ export const projects: Project[] = [
     {
         title: 'Power Controller and Watchdog Unit',
         description:
-            'Improved the power controller for the SAIV APB5 automatic profiling system. The unit distributes power to other system components based on serial input from the main controller. Integrated watchdog functionality ensures the system is operating correctly and automatically resets it in the event of a fault.',
+            'Power controller for the SAIV APB5 automatic profiling system. Distributes power to other system components based on serial input from the main controller. Watchdog functionality ensures the system automatically resets upon fault.',
         category: 'programming',
         tags: [
             'C',
@@ -294,7 +303,7 @@ export const projects: Project[] = [
     {
         title: 'Temperature Sensor Array Casting Mould',
         description:
-            'Designed, technically drawn, and ordered for manufacture a casting mould for an array of temperature sensors used in oceanographic instruments, such as the SAIV CTD Model SD204 and SD208. Used in the production of the sensor housings.',
+            'Casting mould for an array of temperature sensors used in oceanographic instruments, such as the SAIV CTD Model SD204 and SD208.',
         category: 'mechanical',
         tags: [
             '3D Modelling',
@@ -310,7 +319,7 @@ export const projects: Project[] = [
     {
         title: 'AADI DCPS and AADI WS Controller Unit',
         description:
-            'Developed a controller for the Aanderaa Data Instruments (AADI) Doppler Current Profiler Sensor (DCPS) and Wave Sensor (WS) used in the SAIV APB5 automatic profiling system. The controller operates the sensors and communicates via serial interface with a data transmission unit, which forwards the data to an FTP server.',
+            'Controller for the Aanderaa Data Instruments (AADI) Doppler Current Profiler Sensor (DCPS) and Wave Sensor (WS) used in the SAIV APB5 automatic profiling system. Operates the sensors and communicates with a data transmission unit.',
         category: 'programming',
         tags: [
             'C/C++',
@@ -324,7 +333,7 @@ export const projects: Project[] = [
     {
         title: 'SAIV OSU106 Casting Mould',
         description:
-            'Designed, technically drawn, and ordered for manufacture a set of casting mould parts for the SAIV Optional Sensor Unit 106 (OSU106) with improvements to the previous design. Used in the production of the OSU106.',
+            'A set of casting mould parts for the SAIV Optional Sensor Unit 106 (OSU106) with improvements to the previous design.',
         category: 'mechanical',
         tags: [
             '3D Modelling',
@@ -341,7 +350,7 @@ export const projects: Project[] = [
     {
         title: 'SAIV205 Oxygen Sensor Casting Mould',
         description:
-            'Redesigned, technically drawn, and ordered for manufacture casting moulds for the SAIV205 Oxygen Sensor.',
+            'Casting moulds for the SAIV205 Oxygen Sensor.',
         category: 'mechanical',
         tags: [
             '3D Modelling',
@@ -357,7 +366,7 @@ export const projects: Project[] = [
     {
         title: 'Conductivity Sensor Controller Unit',
         description:
-            'Refactored and improved a controller unit for measuring water conductivity in oceanographic instruments. The unit communicates readings to the main controller via serial interface.',
+            'Controller unit for measuring water conductivity in oceanographic instruments. The unit communicates readings to the main controller via serial interface.',
         category: 'programming',
         tags: [
             'C',
@@ -371,7 +380,7 @@ export const projects: Project[] = [
     {
         title: 'Incubator Controller',
         description:
-            'Developed a desktop application for managing an incubator used in the production of oceanographic instruments. The application allows users to define and modify temperature schedules, with real-time graphical visualization of temperature data and schedule timelines. Communicates with the incubator hardware via serial interface.',
+            'Application for managing an incubator used in the production of oceanographic instruments. Control temperature schedules, with real-time graphical visualization.',
         category: 'programming',
         tags: [
             'Java',
@@ -386,7 +395,7 @@ export const projects: Project[] = [
     {
         title: 'Battery Controller Unit',
         description:
-            'Design and implementation of a unit that controls solar power charge to batteries, with a focus on battery life and energy efficiency. Includes electrical data logging for performance monitoring and battery life analysis.',
+            'Unit that controls solar power charge to batteries. Includes electrical data logging for monitoring and analysis.',
         category: 'electronics',
         tags: [
             'Circuit Design',
@@ -406,7 +415,7 @@ export const projects: Project[] = [
     {
         title: 'Remote Controller Unit',
         description:
-            'Design and implementation of a remote controller for the SAIV APB5 automatic profiling system.',
+            'Remote controller for the SAIV APB5 automatic profiling system.',
         category: 'electronics',
         tags: [
             'Circuit Design',
