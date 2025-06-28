@@ -47,7 +47,7 @@ export const projects: Project[] = [
             'Technical Drawing',
             'Static Stress Analysis',
             'Pressure Testing',
-            'Ordering for Manufacture',
+            'Procurement',
             'Autodesk Fusion 360',
             'Vacuum Casting',
             'CNC Machining',
@@ -64,7 +64,7 @@ export const projects: Project[] = [
             '3D Modelling',
             'Technical Drawing',
             'Over-moulding',
-            'Ordering for Manufacture',
+            'Procurement',
             'Autodesk Fusion 360',
             'Vacuum Casting',
             'CNC Machining'
@@ -95,7 +95,7 @@ export const projects: Project[] = [
             '3D Modelling',
             'Technical Drawing',
             'Static Stress Analysis',
-            'Ordering for Manufacture',
+            'Procurement',
             'CNC Machining',
             'Autodesk Fusion 360',
             'High Pressure',
@@ -148,7 +148,7 @@ export const projects: Project[] = [
             'Technical Drawing',
             'Static Stress Analysis',
             'Autodesk Fusion 360',
-            'Ordering for Manufacture',
+            'Procurement',
             'CNC Machining',
             'Sealing'
         ],
@@ -197,7 +197,7 @@ export const projects: Project[] = [
         tags: [
             '3D Modelling',
             'Technical Drawing',
-            'Ordering for Manufacture',
+            'Procurement',
             'CNC Machining',
             'Autodesk Fusion 360',
             'Sealing'
@@ -226,7 +226,7 @@ export const projects: Project[] = [
         tags: [
             '3D Modelling',
             'Technical Drawing',
-            'Ordering for Manufacture',
+            'Procurement',
             'CNC Machining',
             'Autodesk Fusion 360',
         ],
@@ -308,7 +308,7 @@ export const projects: Project[] = [
         tags: [
             '3D Modelling',
             'Technical Drawing',
-            'Ordering for Manufacture',
+            'Procurement',
             'CNC Machining',
             'Autodesk Fusion 360',
             'Casting'
@@ -338,7 +338,7 @@ export const projects: Project[] = [
         tags: [
             '3D Modelling',
             'Technical Drawing',
-            'Ordering for Manufacture',
+            'Procurement',
             'CNC Machining',
             'Autodesk Fusion 360',
             'Press Fitting',
@@ -355,7 +355,7 @@ export const projects: Project[] = [
         tags: [
             '3D Modelling',
             'Technical Drawing',
-            'Ordering for Manufacture',
+            'Procurement',
             'CNC Machining',
             'Autodesk Fusion 360',
             'Casting'
