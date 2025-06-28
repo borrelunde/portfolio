@@ -181,13 +181,13 @@
     /* Align the interests content in a grid layout following the template areas */
     .interests__content {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(5, auto);
+        /* Using 6 columns to support both 2-column and 3-column rows */
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: auto auto auto;
         grid-template-areas:
-            "nature-hiking    landscape-photo"
-            "geography        languages"
-            "chess            technology"
-            "history          music";
+            "nature-hiking  nature-hiking  nature-hiking  landscape-photo  landscape-photo  landscape-photo"
+            "geography      geography      languages      languages        chess            chess"
+            "history        history        history        music            music            music";
         gap: var(--interests-card-gap);
     }
 
@@ -213,14 +213,10 @@
     }
 
     .interests__content .interests__card:nth-child(6) {
-        grid-area: technology;
-    }
-
-    .interests__content .interests__card:nth-child(7) {
         grid-area: history;
     }
 
-    .interests__content .interests__card:nth-child(8) {
+    .interests__content .interests__card:nth-child(7) {
         grid-area: music;
     }
 }
