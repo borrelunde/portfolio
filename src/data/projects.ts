@@ -45,12 +45,9 @@ export const projects: Project[] = [
         tags: [
             '3D Modelling',
             'Technical Drawing',
-            'Static Stress Analysis',
+            'Stress Analysis',
             'Pressure Testing',
             'Procurement',
-            'Autodesk Fusion 360',
-            'Vacuum Casting',
-            'CNC Machining',
         ],
         isOpenSource: false,
         belongsTo: 'SAIV AS',
@@ -65,9 +62,7 @@ export const projects: Project[] = [
             'Technical Drawing',
             'Over-moulding',
             'Procurement',
-            'Autodesk Fusion 360',
-            'Vacuum Casting',
-            'CNC Machining'
+            'Casting'
         ],
         isOpenSource: false,
         belongsTo: 'SAIV AS',
@@ -80,8 +75,7 @@ export const projects: Project[] = [
         tags: [
             '3D Modelling',
             'Technical Drawing',
-            '3D Printing',
-            'Autodesk Fusion 360'
+            '3D Printing'
         ],
         isOpenSource: false,
         belongsTo: 'SAIV AS',
@@ -94,12 +88,8 @@ export const projects: Project[] = [
         tags: [
             '3D Modelling',
             'Technical Drawing',
-            'Static Stress Analysis',
+            'Stress Analysis',
             'Procurement',
-            'CNC Machining',
-            'Autodesk Fusion 360',
-            'High Pressure',
-            'Sealing',
             'Real-world Testing'
         ],
         isOpenSource: false,
@@ -112,12 +102,11 @@ export const projects: Project[] = [
         category: 'programming',
         tags: [
             'Java',
+            'SQL',
             'Gradle',
             'JUnit',
             'Google Maps API',
-            'Database',
-            'SQL',
-            'Angus Mail',
+            'Database'
         ],
         isOpenSource: false,
         belongsTo: 'SAIV AS',
@@ -147,9 +136,7 @@ export const projects: Project[] = [
             '3D Modelling',
             'Technical Drawing',
             'Static Stress Analysis',
-            'Autodesk Fusion 360',
             'Procurement',
-            'CNC Machining',
             'Sealing'
         ],
         isOpenSource: false,
@@ -198,8 +185,6 @@ export const projects: Project[] = [
             '3D Modelling',
             'Technical Drawing',
             'Procurement',
-            'CNC Machining',
-            'Autodesk Fusion 360',
             'Sealing'
         ],
         isOpenSource: false,
@@ -212,8 +197,7 @@ export const projects: Project[] = [
         category: 'mechanical',
         tags: [
             '3D Modelling',
-            'Technical Drawing',
-            'Autodesk Fusion 360'
+            'Technical Drawing'
         ],
         isOpenSource: false,
         belongsTo: 'SAIV AS',
@@ -226,9 +210,7 @@ export const projects: Project[] = [
         tags: [
             '3D Modelling',
             'Technical Drawing',
-            'Procurement',
-            'CNC Machining',
-            'Autodesk Fusion 360',
+            'Procurement'
         ],
         isOpenSource: false,
         belongsTo: 'SAIV AS',
@@ -262,7 +244,7 @@ export const projects: Project[] = [
             'BoostC',
             'Embedded Systems',
             'Serial Communication',
-            'Microcontroller',
+            'Microcontroller'
         ],
         isOpenSource: false,
         belongsTo: 'SAIV AS',
@@ -278,9 +260,7 @@ export const projects: Project[] = [
             'PlatformIO',
             'Embedded Systems',
             'Serial Communication',
-            'Microcontroller',
-            'Data Logging',
-            'Battery Management',
+            'Microcontroller'
         ],
         isOpenSource: false,
         belongsTo: 'SAIV AS',
@@ -309,8 +289,6 @@ export const projects: Project[] = [
             '3D Modelling',
             'Technical Drawing',
             'Procurement',
-            'CNC Machining',
-            'Autodesk Fusion 360',
             'Casting'
         ],
         isOpenSource: false,
@@ -340,8 +318,6 @@ export const projects: Project[] = [
             'Technical Drawing',
             'Procurement',
             'CNC Machining',
-            'Autodesk Fusion 360',
-            'Press Fitting',
             'Casting'
         ],
         isOpenSource: false,
@@ -357,7 +333,6 @@ export const projects: Project[] = [
             'Technical Drawing',
             'Procurement',
             'CNC Machining',
-            'Autodesk Fusion 360',
             'Casting'
         ],
         isOpenSource: false,
@@ -400,11 +375,8 @@ export const projects: Project[] = [
         tags: [
             'Circuit Design',
             'PCB Design',
-            'Prototyping',
-            'Digital Electronics',
-            'Embedded Systems Programming',
+            'Embedded Systems',
             'Serial Communication',
-            'Batteries',
             'C/C++',
             'Arduino',
             'PlatformIO',
@@ -420,15 +392,9 @@ export const projects: Project[] = [
         tags: [
             'Circuit Design',
             'PCB Design',
-            'Prototyping',
             'Digital Electronics',
-            'Embedded Systems Programming',
-            'Serial Communication',
-            'Batteries',
-            'C',
-            'PIC Controller',
-            '3D Printing',
-            'Design Enclosure',
+            'Embedded Systems',
+            'Serial Communication'
         ],
         isOpenSource: false,
         belongsTo: 'SAIV AS',
