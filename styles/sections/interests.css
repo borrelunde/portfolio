@@ -184,12 +184,10 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(5, auto);
         grid-template-areas:
-            "nature-hiking    nature-hiking"
-            "landscape-photo  landscape-photo"
+            "nature-hiking    landscape-photo"
             "geography        languages"
             "chess            technology"
-            "history          history"
-            "music            music";
+            "history          music";
         gap: var(--interests-card-gap);
     }
 
