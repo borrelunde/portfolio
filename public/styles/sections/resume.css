@@ -126,6 +126,15 @@
     margin-bottom: var(--space-3xs); /* A little space between paragraphs to break up the descriptions */
 }
 
+/* Resume item highlights container */
+.resume__item-highlight-paragraphs {
+    /* No styling needed. */
+}
+
+.resume__item-highlight-paragraphs > li {
+    margin-top: var(--space-xs);
+}
+
 /* Resume item highlights */
 .resume__item-highlights {
     margin-top: var(--space-xs);
