@@ -68,19 +68,6 @@ export const projects: Project[] = [
         belongsTo: 'SAIV AS',
     },
     {
-        title: 'CTD Model SD204/SD208 Conductivity Cell Hole Boring Fixture',
-        description:
-            'Boring fixture used in the production of the SAIV CTD Models SD204 and SD208. Ensures accurate hole boring for the conductivity cell.',
-        category: 'mechanical',
-        tags: [
-            '3D Modelling',
-            'Technical Drawing',
-            '3D Printing'
-        ],
-        isOpenSource: false,
-        belongsTo: 'SAIV AS',
-    },
-    {
         title: 'Pressure Vessel',
         description:
             'Pressure vessel for liquid in-house pressure testing of high-pressure underwater connectors. Designed to withstand pressures of up to 1,200 bar.',
@@ -191,18 +178,6 @@ export const projects: Project[] = [
         belongsTo: 'SAIV AS',
     },
     {
-        title: 'SAIV APB5 Buoyancy Ring',
-        description:
-            'Buoyancy rings for the SAIV APB5 profiling stations. Designed to increase buoyancy and improve the surface stability.',
-        category: 'mechanical',
-        tags: [
-            '3D Modelling',
-            'Technical Drawing'
-        ],
-        isOpenSource: false,
-        belongsTo: 'SAIV AS',
-    },
-    {
         title: 'AADI DCPS Deployment Fixture',
         description:
             'Deployment fixture for the Aanderaa Data Instruments (AADI) Doppler Current Profiler Sensor (DCPS) used in the SAIV APB5 automatic profiling system.',
@@ -261,21 +236,6 @@ export const projects: Project[] = [
             'Embedded Systems',
             'Serial Communication',
             'Microcontroller'
-        ],
-        isOpenSource: false,
-        belongsTo: 'SAIV AS',
-    },
-    {
-        title: 'Power Controller and Watchdog Unit',
-        description:
-            'Power controller for the SAIV APB5 automatic profiling system. Distributes power to other system components based on serial input from the main controller. Watchdog functionality ensures the system automatically resets upon fault.',
-        category: 'programming',
-        tags: [
-            'C',
-            'Embedded Systems',
-            'Watchdog',
-            'Serial Communication',
-            'Microcontroller',
         ],
         isOpenSource: false,
         belongsTo: 'SAIV AS',
